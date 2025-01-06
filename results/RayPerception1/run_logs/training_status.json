@@ -1,0 +1,29 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 68803,
+                "file_path": "results/RayPerception1/My Behavior/My Behavior-68803.onnx",
+                "reward": 1.5833333333333333,
+                "creation_time": 1736105500.9261582,
+                "auxillary_file_paths": [
+                    "results/RayPerception1/My Behavior/My Behavior-68803.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 68803,
+            "file_path": "results/RayPerception1/My Behavior.onnx",
+            "reward": 1.5833333333333333,
+            "creation_time": 1736105500.9261582,
+            "auxillary_file_paths": [
+                "results/RayPerception1/My Behavior/My Behavior-68803.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2"
+    }
+}
