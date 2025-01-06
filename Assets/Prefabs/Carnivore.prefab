@@ -47,7 +47,7 @@ MonoBehaviour:
   m_SensorName: RayPerceptionSensor
   m_DetectableTags:
   - wall
-  - food
+  - 
   - herbivore
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 50
