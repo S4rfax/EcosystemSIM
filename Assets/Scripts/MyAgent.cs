@@ -2,14 +2,30 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using System.Collections.Generic;
 
 public class MyAgent : Agent
 {
-    // Felder für Bewegung und Beobachtung
-    public float speed = 2f; // Geschwindigkeit
-    public Transform target; // Zielposition
-
+    // Agent Variables
+    [SerializeField] public float speed = 2f; // Geschwindigkeit
     private Rigidbody rb;
+
+    // Food Variables
+    //public Transform target; // Zielposition
+    [SerializeField] public int foodCount;
+    [SerializeField] public GameObject food;
+    [SerializeField] private List<GameObject> spawnedFoodList = new List<GameObject>();
+    [SerializeField] public float minDistanceFood = 1f;
+
+    // Enviroment Variables
+    [SerializeField] private Transform enviromentLocation;
+
+    // Time Variables
+    [SerializeField] private int timePerEpisode;
+    private float timeLeft;
+
+    // Enemy Agent
+    public CarnivoreAgent classObject;
 
     public override void Initialize()
     {
@@ -21,9 +37,79 @@ public class MyAgent : Agent
     {
         //Agent spawn
         transform.localPosition = new Vector3(Random.Range(-7f, 7f), 0, Random.Range(-7f, 7f));
+        transform.Rotate(0, Random.Range(-180f, 180f), 0);
 
         //Target spawn
-        target.localPosition = new Vector3(Random.Range(-7f, 7f), 0, Random.Range(-7f, 7f));
+        //target.localPosition = new Vector3(Random.Range(-7f, 7f), 0, Random.Range(-7f, 7f));
+        CreateFood();
+
+        //Timer
+        EpisodeTimerNew();
+    }
+
+    private void Update()
+    {
+        CheckRemainingTime();
+    }
+
+    private void CreateFood()
+    {
+        if(spawnedFoodList.Count != 0)
+        {
+            RemoveFood(spawnedFoodList);
+        }
+
+        for(int i = 0; i < foodCount; i++)
+        {
+            GameObject newFood = Instantiate(food);
+
+            newFood.transform.parent = enviromentLocation;
+
+            Vector3 foodLocation = new Vector3(Random.Range(-7f, 7f), 0, Random.Range(-7f, 7f));
+
+            while(CheckOverlap(foodLocation, spawnedFoodList, minDistanceFood))
+            {
+               foodLocation = new Vector3(Random.Range(-7f, 7f), 0, Random.Range(-7f, 7f)); 
+            }
+
+            newFood.transform.localPosition = foodLocation;
+
+            Debug.Log(newFood.transform.localPosition);
+
+            spawnedFoodList.Add(newFood);
+        }
+    }
+
+    private void RemoveFood(List<GameObject> foodToDelete)
+    {
+        foreach(GameObject i in foodToDelete)
+        {
+            Destroy(i.gameObject);
+        }
+        foodToDelete.Clear();
+    }
+
+    public bool CheckOverlap(Vector3 posToCheck, List<GameObject> existingObjects, float minDistance)
+    {
+        if(existingObjects.Count == 0)
+        {
+            return false;
+        }
+
+        foreach(GameObject i in existingObjects)
+        {
+            Vector3 objectPos = i.transform.localPosition;
+
+            float Distance = Vector3.Distance(posToCheck, objectPos);
+
+            if(Distance < minDistance)
+            {
+                return true;
+            }
+
+        }
+
+        return false;
     }
 
     // Wird verwendet, um Beobachtungen zu sammeln
@@ -60,14 +146,23 @@ public class MyAgent : Agent
     {
         if (colobjct.gameObject.CompareTag("food"))
         {
-            //collision.gameObject.GetComponent<FoodLogic>().OnEaten();
-            AddReward(5f);
-            EndEpisode();
+            spawnedFoodList.Remove(colobjct.gameObject);
+            Destroy(colobjct.gameObject);
+            AddReward(10f);
+            if(spawnedFoodList.Count == 0)
+            {
+                AddReward(5f);
+                classObject.AddReward(-5f);
+                EndEpisode();
+                classObject.EndEpisode();
+            }
+            
         }
         else if(colobjct.gameObject.CompareTag("wall"))
         {
-            AddReward(-1f);
+            AddReward(-15f);
             EndEpisode();
+            classObject.EndEpisode();
         }
     }
 
@@ -79,4 +174,22 @@ public class MyAgent : Agent
         continuousActions[0] = Input.GetAxisRaw("Horizontal"); // Bewegung auf der X-Achse
         continuousActions[1] = Input.GetAxisRaw("Vertical");   // Bewegung auf der Z-Achse
     }
+
+    private void EpisodeTimerNew()
+    {
+        timeLeft = Time.time + timePerEpisode;
+    }
+
+    private void CheckRemainingTime()
+    {
+        if(Time.time >= timeLeft)
+        {
+            AddReward(-15f);
+            classObject.AddReward(-15f);
+
+            EndEpisode();
+            classObject.EndEpisode();
+        }
+    }
+
 }
