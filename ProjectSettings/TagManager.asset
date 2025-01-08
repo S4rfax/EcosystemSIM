@@ -6,6 +6,8 @@ TagManager:
   tags:
   - food
   - wall
+  - herbivore
+  - carnivore
   layers:
   - Default
   - TransparentFX
