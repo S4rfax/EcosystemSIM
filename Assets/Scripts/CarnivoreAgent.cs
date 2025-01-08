@@ -45,7 +45,7 @@ public class CarnivoreAgent : Agent
 
         // Initialize previousDistance
         previousDistance = Vector3.Distance(transform.position, herbivore.transform.position);
-        Debug.Log($"Initial distance to herbivore: {previousDistance}");
+        //Debug.Log($"Initial distance to herbivore: {previousDistance}");
     }
 
     public override void CollectObservations(VectorSensor sensor)

@@ -1,45 +1,45 @@
 {
-    "My Behavior": {
-        "checkpoints": [
-            {
-                "steps": 11460,
-                "file_path": "results\\Multitraining4\\My Behavior\\My Behavior-11460.onnx",
-                "reward": -5.0,
-                "creation_time": 1736351672.8083992,
-                "auxillary_file_paths": [
-                    "results\\Multitraining4\\My Behavior\\My Behavior-11460.pt"
-                ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 11460,
-            "file_path": "results\\Multitraining4\\My Behavior.onnx",
-            "reward": -5.0,
-            "creation_time": 1736351672.8083992,
-            "auxillary_file_paths": [
-                "results\\Multitraining4\\My Behavior\\My Behavior-11460.pt"
-            ]
-        }
-    },
     "Carnivore Behavior": {
         "checkpoints": [
             {
-                "steps": 11460,
-                "file_path": "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-11460.onnx",
-                "reward": -11.943333193659782,
-                "creation_time": 1736351672.8921592,
+                "steps": 60199,
+                "file_path": "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-60199.onnx",
+                "reward": -11.258518563376533,
+                "creation_time": 1736366510.793183,
                 "auxillary_file_paths": [
-                    "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-11460.pt"
+                    "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-60199.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 11460,
+            "steps": 60199,
             "file_path": "results\\Multitraining4\\Carnivore Behavior.onnx",
-            "reward": -11.943333193659782,
-            "creation_time": 1736351672.8921592,
+            "reward": -11.258518563376533,
+            "creation_time": 1736366510.793183,
             "auxillary_file_paths": [
-                "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-11460.pt"
+                "results\\Multitraining4\\Carnivore Behavior\\Carnivore Behavior-60199.pt"
+            ]
+        }
+    },
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 60199,
+                "file_path": "results\\Multitraining4\\My Behavior\\My Behavior-60199.onnx",
+                "reward": -12.5,
+                "creation_time": 1736366511.015113,
+                "auxillary_file_paths": [
+                    "results\\Multitraining4\\My Behavior\\My Behavior-60199.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 60199,
+            "file_path": "results\\Multitraining4\\My Behavior.onnx",
+            "reward": -12.5,
+            "creation_time": 1736366511.015113,
+            "auxillary_file_paths": [
+                "results\\Multitraining4\\My Behavior\\My Behavior-60199.pt"
             ]
         }
     },
