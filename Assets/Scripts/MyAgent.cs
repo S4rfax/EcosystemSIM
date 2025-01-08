@@ -12,7 +12,7 @@ public class MyAgent : Agent
 
     // Food Variables
     //public Transform target; // Zielposition
-    [SerializeField] public int foodCount;
+    [SerializeField] public int foodCount = 3;
     [SerializeField] public GameObject food;
     [SerializeField] private List<GameObject> spawnedFoodList = new List<GameObject>();
     [SerializeField] public float minDistanceFood = 1f;

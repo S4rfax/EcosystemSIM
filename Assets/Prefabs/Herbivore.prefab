@@ -476,8 +476,8 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 3000
-  speed: 4
-  foodCount: 6
+  speed: 2
+  foodCount: 1
   food: {fileID: 4600773496943782662, guid: 575618229118248dea0206a2e89bb026, type: 3}
   spawnedFoodList: []
   minDistanceFood: 1

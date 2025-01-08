@@ -42,7 +42,7 @@ behaviors:
     reward_signals:
       extrinsic:
         gamma: 0.99
-        strength: 1.0
+        strength: 2.0
     keep_checkpoints: 5
     max_steps: 2000000
     time_horizon: 64
