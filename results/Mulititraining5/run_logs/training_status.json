@@ -1,0 +1,105 @@
+{
+    "Carnivore Behavior": {
+        "checkpoints": [
+            {
+                "steps": 499966,
+                "file_path": "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-499966.onnx",
+                "reward": 8.158749817870557,
+                "creation_time": 1736412897.6024306,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-499966.pt"
+                ]
+            },
+            {
+                "steps": 999946,
+                "file_path": "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-999946.onnx",
+                "reward": 3.158518383624377,
+                "creation_time": 1736417526.272847,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-999946.pt"
+                ]
+            },
+            {
+                "steps": 1499997,
+                "file_path": "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-1499997.onnx",
+                "reward": 2.0769998252391817,
+                "creation_time": 1736422478.135482,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-1499997.pt"
+                ]
+            },
+            {
+                "steps": 1727551,
+                "file_path": "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-1727551.onnx",
+                "reward": -1.369411731029258,
+                "creation_time": 1736424867.8967044,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-1727551.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1727551,
+            "file_path": "results\\Mulititraining5\\Carnivore Behavior.onnx",
+            "reward": -1.369411731029258,
+            "creation_time": 1736424867.8967044,
+            "auxillary_file_paths": [
+                "results\\Mulititraining5\\Carnivore Behavior\\Carnivore Behavior-1727551.pt"
+            ]
+        }
+    },
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 499966,
+                "file_path": "results\\Mulititraining5\\My Behavior\\My Behavior-499966.onnx",
+                "reward": -14.0625,
+                "creation_time": 1736412897.6889553,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\My Behavior\\My Behavior-499966.pt"
+                ]
+            },
+            {
+                "steps": 999946,
+                "file_path": "results\\Mulititraining5\\My Behavior\\My Behavior-999946.onnx",
+                "reward": -3.4615384615384617,
+                "creation_time": 1736417526.3615825,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\My Behavior\\My Behavior-999946.pt"
+                ]
+            },
+            {
+                "steps": 1499997,
+                "file_path": "results\\Mulititraining5\\My Behavior\\My Behavior-1499997.onnx",
+                "reward": 3.0,
+                "creation_time": 1736422478.2335298,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\My Behavior\\My Behavior-1499997.pt"
+                ]
+            },
+            {
+                "steps": 1727551,
+                "file_path": "results\\Mulititraining5\\My Behavior\\My Behavior-1727551.onnx",
+                "reward": -5.0,
+                "creation_time": 1736424868.0290859,
+                "auxillary_file_paths": [
+                    "results\\Mulititraining5\\My Behavior\\My Behavior-1727551.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1727551,
+            "file_path": "results\\Mulititraining5\\My Behavior.onnx",
+            "reward": -5.0,
+            "creation_time": 1736424868.0290859,
+            "auxillary_file_paths": [
+                "results\\Mulititraining5\\My Behavior\\My Behavior-1727551.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}
