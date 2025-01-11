@@ -1,0 +1,51 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 67,
+                "file_path": "results/multitrainingSAC2.11/My Behavior/My Behavior-67.onnx",
+                "reward": -9.285714285714286,
+                "creation_time": 1736594946.376894,
+                "auxillary_file_paths": [
+                    "results/multitrainingSAC2.11/My Behavior/My Behavior-67.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 67,
+            "file_path": "results/multitrainingSAC2.11/My Behavior.onnx",
+            "reward": -9.285714285714286,
+            "creation_time": 1736594946.376894,
+            "auxillary_file_paths": [
+                "results/multitrainingSAC2.11/My Behavior/My Behavior-67.pt"
+            ]
+        }
+    },
+    "Carnivore Behavior": {
+        "checkpoints": [
+            {
+                "steps": 262,
+                "file_path": "results/multitrainingSAC2.11/Carnivore Behavior/Carnivore Behavior-262.onnx",
+                "reward": null,
+                "creation_time": 1736594946.413324,
+                "auxillary_file_paths": [
+                    "results/multitrainingSAC2.11/Carnivore Behavior/Carnivore Behavior-262.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 262,
+            "file_path": "results/multitrainingSAC2.11/Carnivore Behavior.onnx",
+            "reward": null,
+            "creation_time": 1736594946.413324,
+            "auxillary_file_paths": [
+                "results/multitrainingSAC2.11/Carnivore Behavior/Carnivore Behavior-262.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.6.0.dev20241112"
+    }
+}

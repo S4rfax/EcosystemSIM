@@ -1,0 +1,69 @@
+{
+    "Carnivore Behavior": {
+        "checkpoints": [
+            {
+                "steps": 499978,
+                "file_path": "results/multitraining2.10/Carnivore Behavior/Carnivore Behavior-499978.onnx",
+                "reward": 1.6666666666666667,
+                "creation_time": 1736556491.293542,
+                "auxillary_file_paths": [
+                    "results/multitraining2.10/Carnivore Behavior/Carnivore Behavior-499978.pt"
+                ]
+            },
+            {
+                "steps": 500030,
+                "file_path": "results/multitraining2.10/Carnivore Behavior/Carnivore Behavior-500030.onnx",
+                "reward": 1.5217391304347827,
+                "creation_time": 1736556491.339442,
+                "auxillary_file_paths": [
+                    "results/multitraining2.10/Carnivore Behavior/Carnivore Behavior-500030.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500030,
+            "file_path": "results/multitraining2.10/Carnivore Behavior.onnx",
+            "reward": 1.5217391304347827,
+            "creation_time": 1736556491.339442,
+            "auxillary_file_paths": [
+                "results/multitraining2.10/Carnivore Behavior/Carnivore Behavior-500030.pt"
+            ]
+        }
+    },
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 499978,
+                "file_path": "results/multitraining2.10/My Behavior/My Behavior-499978.onnx",
+                "reward": 105.46511627906976,
+                "creation_time": 1736556491.32024,
+                "auxillary_file_paths": [
+                    "results/multitraining2.10/My Behavior/My Behavior-499978.pt"
+                ]
+            },
+            {
+                "steps": 500030,
+                "file_path": "results/multitraining2.10/My Behavior/My Behavior-500030.onnx",
+                "reward": 105.9090909090909,
+                "creation_time": 1736556491.358316,
+                "auxillary_file_paths": [
+                    "results/multitraining2.10/My Behavior/My Behavior-500030.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500030,
+            "file_path": "results/multitraining2.10/My Behavior.onnx",
+            "reward": 105.9090909090909,
+            "creation_time": 1736556491.358316,
+            "auxillary_file_paths": [
+                "results/multitraining2.10/My Behavior/My Behavior-500030.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1"
+    }
+}

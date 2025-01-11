@@ -24,6 +24,15 @@ public class MyAgent : Agent
     [SerializeField] private int timePerEpisode;
     private float timeLeft;
 
+    //Rewards
+    public float foundFood = 10f;
+    public float foundWall = -15f;
+    public float foundAllFood = 15f;
+    public float timeout = -15f;
+    public float gotEaten = -20f;
+    public float carnivoreLost = -5f;
+
+
     // Enemy Agent
     public CarnivoreAgent classObject;
 
@@ -148,11 +157,11 @@ public class MyAgent : Agent
         {
             spawnedFoodList.Remove(colobjct.gameObject);
             Destroy(colobjct.gameObject);
-            AddReward(10f);
+            AddReward(foundFood);
             if(spawnedFoodList.Count == 0)
             {
-                AddReward(5f);
-                classObject.AddReward(-5f);
+                AddReward(foundAllFood);
+                classObject.AddReward(carnivoreLost);
                 EndEpisode();
                 classObject.EndEpisode();
             }
@@ -160,7 +169,7 @@ public class MyAgent : Agent
         }
         else if(colobjct.gameObject.CompareTag("wall"))
         {
-            AddReward(-15f);
+            AddReward(foundWall);
             EndEpisode();
             classObject.EndEpisode();
         }
@@ -184,8 +193,8 @@ public class MyAgent : Agent
     {
         if(Time.time >= timeLeft)
         {
-            AddReward(-15f);
-            classObject.AddReward(-15f);
+            AddReward(timeout);
+            classObject.AddReward(timeout);
 
             EndEpisode();
             classObject.EndEpisode();

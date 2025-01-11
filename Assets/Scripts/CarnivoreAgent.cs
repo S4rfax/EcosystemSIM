@@ -12,6 +12,10 @@ public class CarnivoreAgent : Agent
 
     [SerializeField] public float minDistanceHerbCarn = 5f;
 
+    //Rewards
+    public float foundHerbivore = 70f;
+    public float foundWall = -15f;
+
     public GameObject env;
 
     public GameObject herbivore;
@@ -64,7 +68,7 @@ public class CarnivoreAgent : Agent
     {
         if (colobjct.gameObject.CompareTag("herbivore"))
         {
-            AddReward(10f);
+            AddReward(foundHerbivore);
             classObject.AddReward(-15f);
 
 
@@ -74,7 +78,7 @@ public class CarnivoreAgent : Agent
         }
         else if(colobjct.gameObject.CompareTag("wall"))
         {
-            AddReward(-15f);
+            AddReward(foundWall);
             EndEpisode();
         }
     }

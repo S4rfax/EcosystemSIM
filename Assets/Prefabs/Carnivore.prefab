@@ -476,8 +476,10 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  speed: 2
+  speed: 7
   minDistanceHerbCarn: 10
+  foundHerbivore: 50
+  foundWall: -15
   env: {fileID: 0}
   herbivore: {fileID: 5469330762427870360, guid: 6669f9d2d7db74ee396c4824e4de165b, type: 3}
   classObject: {fileID: 0}
